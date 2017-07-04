@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="front.css">
+<link rel="stylesheet" href="front2.css">
+<link rel="stylesheet" href="front3.css">
+<body>
+
+
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="1.jpg"
+  style="width:100%">
+  <img class="mySlides" src="3.jpg"
+  style="width:100%">
+  <img class="mySlides" src="2.jpg"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">CAS &amp; KET</h2>
+  <p class="w3-opacity"><i>Store as you say</i></p>
+  <p class="w3-justify">Hey there.Casket and its developer welcomes you.Join in discover the breathtaking and multidimensional functionalities. </p>
+</section>
+
+
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    
+   <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'"style="width:auto;">Open your Casket</button>
+<button onclick="document.getElementById('id02').style.display='block'"style="width:auto;">Join Casket</button>
+
+
+
+<!-- The Modal for sign in-->
+<div id="id01" class="modal1">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal1-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="4.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	  
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+</form>
+</div>
+
+<div id="id02" class="modal2">
+  <span onclick="document.getElementById('id02').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal1-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="4.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pass" required>
+	  
+	   <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+	  
+	   <label><b>Address</b></label>
+      <input type="text" placeholder="Enter Address" name="address" required>
+	  
+	   <label><b>Phone number</b></label>
+      <input type="number" placeholder="Enter Contact number" name="phonenumber" required>
+
+      <button type="submit">Register</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+	</div>
+</form>
+</div>
+
+  </article>
+  
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by Sameer
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
+<script>
+// Get the modal
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
